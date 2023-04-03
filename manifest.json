@@ -1,0 +1,31 @@
+{
+  "_comment1": "Specifies basic metadata for extension: see https://developer.chrome.com/extensions/manifest for more details",
+  "manifest_version": 2,
+  "author": "insert author names here",
+  "name": "insert project name here",
+  "description": "insert project description here ",
+  "version": "1.0",
+
+  "_comment2": "Icons for 'chrome://extensions'",
+  "icons": {
+    "16": "/icons/",
+    "48": "/icons/",
+    "128": "/icons/"
+  },
+
+  "_comment3": "Icons for 🧩 => 'Extensions' modal",
+  "page_action": {
+    "default_icon": {
+      "16": "/icons/",
+      "48": "/icons/",
+      "128": "/icons/"
+    },
+    "content_scripts": [
+      {
+        "_comment4": "`*` matches all URLs under 'www.google.com', but you can also specify a list of URLs",
+        "matches": ["https://www.google.com/*"],
+        "css": ["main.css"]
+      }
+    ]
+  }
+}

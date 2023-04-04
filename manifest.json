@@ -1,37 +1,22 @@
 {
-  "_comment1": "Specifies basic metadata for extension: see https://developer.chrome.com/extensions/manifest for more details",
-  "manifest_version": 2,
   "name": "insert project name here",
-  "description": "insert project description here ",
-  "version": "1.0",
   "author": "insert author names here",
+  "description": "insert project description here",
+  "version": "1.0",
+  "manifest_version": 3,
 
-  "browser_action": {
-    "default_icon": "",
-    "default_popup": ""
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "insert project name here",
+    "default_icon": "icons/logo.jpg"
   },
+
   "permissions": [],
 
-  "_comment2": "Icons for 'chrome://extensions'",
-  "icons": {
-    "16": "/icons/",
-    "48": "/icons/",
-    "128": "/icons/"
-  },
-
-  "_comment3": "Icons for 🧩 => 'Extensions' modal",
-  "page_action": {
-    "default_icon": {
-      "16": "/icons/",
-      "48": "/icons/",
-      "128": "/icons/"
-    },
-    "content_scripts": [
-      {
-        "_comment4": "`*` matches all URLs under 'www.google.com/maps'",
-        "matches": ["https://www.google.com/maps/*"],
-        "css": ["main.css"]
-      }
-    ]
-  }
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/maps/*"],
+      "css": ["popup.css"]
+    }
+  ]
 }

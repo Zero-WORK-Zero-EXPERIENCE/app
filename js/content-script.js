@@ -1,4 +1,4 @@
-// IIFE to avoid global scope pollution (https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
+// IIFE ensures content script runs immediately
 (() => {
   // Receives message from `background.js` to run
   chrome.runtime.onMessage.addListener((obj, sender, response) => {
